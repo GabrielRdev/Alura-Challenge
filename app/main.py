@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 import plotly.express as px
+import plotly.graph_objects as go
 
 
 
@@ -122,14 +123,36 @@ frete_medio_loja4 = round(frete_medio_loja4, 2)
 
 
 st.set_page_config(page_title="Análise de Vendas", page_icon=":bar_chart:", layout="wide")
-st.title("Análise de Vendas por Loja")
-st.subheader("Faturamento Total por Loja")
-st.write("Faturamento total da loja 1: ", format_faturamento_loja1)     
-st.write("Faturamento total da loja 2: ", format_faturamento_loja2)     
-st.write("Faturamento total da loja 3: ", format_faturamento_loja3)
-st.write("Faturamento total da loja 4: ", format_faturamento_loja4)
+st.title("Análise de Dados da Loja do Sr João")
+fig = px.line(
+    x=["Loja 1", "Loja 2", "Loja 3", "Loja 4"],
+    y=[faturamento_loja1, faturamento_loja2, faturamento_loja3, faturamento_loja4],
+    labels={"x": "", "y": "Faturamento R$"},
+    title="Faturamento por Loja",
+    markers=True,
+)
+fig.update_traces(marker=dict(size=10, line=dict(width=2, color="DarkSlateGrey")))
+fig.update_layout(
+    title_font=dict(size=20, color="white"),
+    xaxis_title_font=dict(size=16, color="white"),
+    yaxis_title_font=dict(size=16, color="white"),
+    legend_title_font=dict(size=16, color="black"),
+    font=dict(size=14, color="black"),
+)
+st.plotly_chart(fig, use_container_width=True)
 
-
-st.subheader("Vendas por Categoria")
+col1, col2, col3, col4 = st.columns(4)
+col1.metric(" Loja 1", format_faturamento_loja1)
+col1.metric(" Avaliação", media_avaliacao_loja1)
+col1.metric(" Frete Médio", frete_medio_loja1)
+col2.metric(" Loja 2", format_faturamento_loja2)
+col2.metric(" Avaliação", media_avaliacao_loja2)
+col2.metric(" Frete Médio", frete_medio_loja2)
+col3.metric(" Loja 3", format_faturamento_loja3)
+col3.metric(" Avaliação", media_avaliacao_loja3)
+col3.metric(" Frete Médio", frete_medio_loja3)
+col4.metric(" Loja 4", format_faturamento_loja4)
+col4.metric(" Avaliação", media_avaliacao_loja4)
+col4.metric(" Frete Médio", frete_medio_loja4)
 
 
