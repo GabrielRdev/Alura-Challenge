@@ -103,4 +103,18 @@ print( produtos_mais_vendidos_loja4)
 
 
 # frete médio por loja 
+frete_medio_loja1 = loja['Frete'].mean()
+frete_medio_loja1 = round(frete_medio_loja1, 2)
+print('Frete médio da loja 1:', frete_medio_loja1)
 
+frete_medio_loja2 = loja2['Frete'].mean()
+frete_medio_loja2 = round(frete_medio_loja2, 2)
+print('Frete médio da loja 2:', frete_medio_loja2)
+
+frete_medio_loja3 = loja3['Frete'].mean()
+frete_medio_loja3 = round(frete_medio_loja3, 2)
+print('Frete médio da loja 3:', frete_medio_loja3)
+
+frete_medio_loja4 = loja4['Frete'].mean()
+frete_medio_loja4 = round(frete_medio_loja4, 2)
+print('Frete médio da loja 4:', frete_medio_loja4)
