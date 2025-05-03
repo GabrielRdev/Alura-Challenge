@@ -81,25 +81,46 @@ media_avaliacao_loja4 = round(media_avaliacao_loja4, 2)
 print('Média de avaliação da loja 4:', media_avaliacao_loja4)
 
 # produtos mais vendidos e menos vendidos
-produtos_mais_vendidos_loja1 = loja['Produto'].value_counts()
+produtos_mais_vendidos_loja1 = loja['Produto'].value_counts().head(5)
 produtos_mais_vendidos_loja1 = produtos_mais_vendidos_loja1.reset_index()
 produtos_mais_vendidos_loja1.columns = ['Produto', 'Quantidade']
 print( produtos_mais_vendidos_loja1)
 
-produtos_mais_vendidos_loja2 = loja2['Produto'].value_counts()
+produto_menos_vendidos_loja1 = loja['Produto'].value_counts().tail(5)
+produto_menos_vendidos_loja1 = produto_menos_vendidos_loja1.reset_index()   
+produto_menos_vendidos_loja1.columns = ['Produto', 'Quantidade']
+print(produto_menos_vendidos_loja1)
+
+
+produtos_mais_vendidos_loja2 = loja2['Produto'].value_counts().head(5)
 produtos_mais_vendidos_loja2 = produtos_mais_vendidos_loja2.reset_index()
 produtos_mais_vendidos_loja2.columns = ['Produto', 'Quantidade']
 print( produtos_mais_vendidos_loja2)
 
-produtos_mais_vendidos_loja3 = loja3['Produto'].value_counts()
+produto_menos_vendidos_loja2 = loja2['Produto'].value_counts().tail(5)
+produto_menos_vendidos_loja2 = produto_menos_vendidos_loja2.reset_index()
+produto_menos_vendidos_loja2.columns = ['Produto', 'Quantidade']
+print(produto_menos_vendidos_loja2)
+
+produtos_mais_vendidos_loja3 = loja3['Produto'].value_counts().head(5)
 produtos_mais_vendidos_loja3 = produtos_mais_vendidos_loja3.reset_index()
 produtos_mais_vendidos_loja3.columns = ['Produto', 'Quantidade']
 print( produtos_mais_vendidos_loja3)
 
-produtos_mais_vendidos_loja4 = loja4['Produto'].value_counts()
+produto_menos_vendidos_loja3 = loja3['Produto'].value_counts().tail(5)
+produto_menos_vendidos_loja3 = produto_menos_vendidos_loja3.reset_index()
+produto_menos_vendidos_loja3.columns = ['Produto', 'Quantidade']
+print(produto_menos_vendidos_loja3)
+
+produtos_mais_vendidos_loja4 = loja4['Produto'].value_counts().head(5)  
 produtos_mais_vendidos_loja4 = produtos_mais_vendidos_loja4.reset_index()
 produtos_mais_vendidos_loja4.columns = ['Produto', 'Quantidade']
 print( produtos_mais_vendidos_loja4)
+
+prpoduto_menos_vendidos_loja4 = loja4['Produto'].value_counts().tail(5)
+prpoduto_menos_vendidos_loja4 = prpoduto_menos_vendidos_loja4.reset_index()
+prpoduto_menos_vendidos_loja4.columns = ['Produto', 'Quantidade']
+print(prpoduto_menos_vendidos_loja4)
 
 
 # frete médio por loja 
