@@ -57,6 +57,7 @@ venda_por_categoria_loja3 = loja3['Categoria do Produto'].value_counts()
 
 venda_por_categoria_loja4 = loja4['Categoria do Produto'].value_counts()
 
+
 # média de avaliação por lojas
 
 media_avaliacao_loja1 = loja['Avaliação da compra'].mean()
@@ -155,4 +156,29 @@ col4.metric(" Loja 4", format_faturamento_loja4)
 col4.metric(" Avaliação", media_avaliacao_loja4)
 col4.metric(" Frete Médio", frete_medio_loja4)
 
+st.write("##")
+st.write("### Quantidade de Vendas por Categoria")    
+abas = st.tabs(["Loja 1", "Loja 2", "Loja 3", "Loja 4"])
+with abas[0]:
+    fig1, ax1 = plt.subplots()
+    ax1.pie(venda_por_categoria_loja1, labels=venda_por_categoria_loja1.index, autopct='%1.1f%%', startangle=90)
+    ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    st.pyplot(fig1)
+with abas[1]:
+    fig2, ax2 = plt.subplots()
+    ax2.pie(venda_por_categoria_loja2, labels=venda_por_categoria_loja2.index, autopct='%1.1f%%', startangle=90)
+    ax2.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    st.pyplot(fig2)
+with abas[2]:
+    fig3, ax3 = plt.subplots()
+    ax3.pie(venda_por_categoria_loja3, labels=venda_por_categoria_loja3.index, autopct='%1.1f%%', startangle=90)
+    ax3.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    st.pyplot(fig3)
+with abas[3]:
+    fig4, ax4 = plt.subplots()
+    ax4.pie(venda_por_categoria_loja4, labels=venda_por_categoria_loja4.index, autopct='%1.1f%%', startangle=90)
+    ax4.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    st.pyplot(fig4)
 
+st.write("##")
+st.write("### Produtos Mais Vendidos")  
