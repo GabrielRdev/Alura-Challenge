@@ -125,6 +125,11 @@ frete_medio_loja4 = round(frete_medio_loja4, 2)
 
 st.set_page_config(page_title="Análise de Vendas", page_icon=":bar_chart:", layout="wide")
 st.title("Análise de Dados da Loja do Sr João")
+st.write("##")
+st.subheader("Relatório Final")
+st.subheader("Contexto")
+st.write("O sr João possui uma rede de 4 Lojas chamada Alura Store no qual vende diversos produtos. Neste caso, o sr João deseja vender uma de suas lojas para iniciar um novo empreendimento. Meu trabalho aqui é auxiliar-lo a entender qual das lojas é mais apropriada para realizar o desejo do Sr João.")
+
 fig = px.line(
     x=["Loja 1", "Loja 2", "Loja 3", "Loja 4"],
     y=[faturamento_loja1, faturamento_loja2, faturamento_loja3, faturamento_loja4],
@@ -146,18 +151,26 @@ col1, col2, col3, col4 = st.columns(4)
 col1.metric(" Loja 1", format_faturamento_loja1)
 col1.metric(" Avaliação", media_avaliacao_loja1)
 col1.metric(" Frete Médio", frete_medio_loja1)
+col1.metric("Quantidade de Vendas", loja['Produto'].count())
+
 col2.metric(" Loja 2", format_faturamento_loja2)
 col2.metric(" Avaliação", media_avaliacao_loja2)
 col2.metric(" Frete Médio", frete_medio_loja2)
+col2.metric("Quantidade de Vendas", loja2['Produto'].count())
+
 col3.metric(" Loja 3", format_faturamento_loja3)
 col3.metric(" Avaliação", media_avaliacao_loja3)
 col3.metric(" Frete Médio", frete_medio_loja3)
+col3.metric("Quantidade de Vendas", loja3['Produto'].count())
+
 col4.metric(" Loja 4", format_faturamento_loja4)
 col4.metric(" Avaliação", media_avaliacao_loja4)
 col4.metric(" Frete Médio", frete_medio_loja4)
+col4.metric("Quantidade de Vendas", loja4['Produto'].count())
 
 st.write("##")
-st.write("### Quantidade de Vendas por Categoria")    
+
+st.write("### Comparativo de Vendas por Categoria")    
 abas = st.tabs(["Loja 1", "Loja 2", "Loja 3", "Loja 4"])
 with abas[0]:
     fig1, ax1 = plt.subplots()
@@ -179,6 +192,40 @@ with abas[3]:
     ax4.pie(venda_por_categoria_loja4, labels=venda_por_categoria_loja4.index, autopct='%1.1f%%', startangle=90)
     ax4.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
     st.pyplot(fig4)
+st.write("##")
+
+
+st.write("### Produtos Mais Vendidos")  
+
+abas2 = st.tabs(["Loja 1", "Loja 2", "Loja 3", "Loja 4"])
+with abas2[0]:
+    fig5 = px.bar(produtos_mais_vendidos_loja1, x='Produto', y='Quantidade')
+    st.plotly_chart(fig5, use_container_width=True) 
+with abas2[1]:
+    fig6 = px.bar(produtos_mais_vendidos_loja2, x='Produto', y='Quantidade')
+    st.plotly_chart(fig6, use_container_width=True)
+with abas2[2]:
+    fig7 = px.bar(produtos_mais_vendidos_loja3, x='Produto', y='Quantidade')
+    st.plotly_chart(fig7, use_container_width=True)
+with abas2[3]:
+    fig8 = px.bar(produtos_mais_vendidos_loja4, x='Produto', y='Quantidade')
+    st.plotly_chart(fig8, use_container_width=True)    
+st.write("##")
+
+st.write("### Produtos Menos Vendidos")
+abas3 = st.tabs(["Loja 1", "Loja 2", "Loja 3", "Loja 4"])
+with abas3[0]:
+    fig9 = px.bar(produto_menos_vendidos_loja1, x='Produto', y='Quantidade')
+    st.plotly_chart(fig9, use_container_width=True)
+with abas3[1]:
+    fig10 = px.bar(produto_menos_vendidos_loja2, x='Produto', y='Quantidade')
+    st.plotly_chart(fig10, use_container_width=True)    
+with abas3[2]:
+    fig11 = px.bar(produto_menos_vendidos_loja3, x='Produto', y='Quantidade')
+    st.plotly_chart(fig11, use_container_width=True)
+with abas3[3]:
+    fig12 = px.bar(prpoduto_menos_vendidos_loja4, x='Produto', y='Quantidade')
+    st.plotly_chart(fig12, use_container_width=True)
 
 st.write("##")
-st.write("### Produtos Mais Vendidos")  
+
