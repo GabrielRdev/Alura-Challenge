@@ -38,6 +38,10 @@ A análise dos principais indicadores das quatro lojas do Sr. João revelou os s
 - **🚚 Custo Médio do Frete:**  
   A **Loja 4 apresenta o menor custo médio de frete** (R$31,28), o que pode indicar melhor localização logística ou eficiência operacional. A **Loja 1 tem o maior custo médio de frete** (R$34,69), impactando na margem de lucro.
 
+  [Clique aqui para visualizar os gráficos](https://alura-challenge-one-kwvpbbtc4jpfmmwqpvyc9q.streamlit.app/)
+
+---
+
 ### 📌 Considerações
 
 Apesar da **Loja 1 ter o maior faturamento**, ela **tem a pior avaliação dos clientes e o maior custo de frete**. Já a **Loja 4 apresenta o menor faturamento**, mas possui **melhor custo logístico e avaliação razoável**, o que pode indicar uma operação mais enxuta.
