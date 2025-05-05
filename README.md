@@ -29,7 +29,8 @@ Com base nesses dados, identificar **qual loja pode ser vendida** com menor impa
 A análise dos principais indicadores das quatro lojas do Sr. João revelou os seguintes pontos:
 
 - **🔝 Faturamento Total:**  
-  A **Loja 1** possui o maior faturamento (R$1.534.509,12), seguida pela Loja 2 e Loja 3. A **Loja 4 tem o menor faturamento** (R$1.384.497,58), o que pode indicar menor potencial de receita.
+  A **Loja 1** possui o maior faturamento (R$1.534.509,12), seguida pela Loja 2 e Loja 3. A **Loja 4 tem o menor faturamento** (R$1.384.497,58), o que pode indicar menor potencial de receita."
+  ![descricao](images/)
 
 - **⭐ Média das Avaliações:**  
   A **Loja 3 é a melhor avaliada pelos clientes** (nota 4.05), enquanto a **Loja 1 apresenta a pior avaliação** (nota 3.98). A percepção do cliente é um fator crucial para a reputação e continuidade do negócio.
@@ -108,3 +109,7 @@ Apesar da **Loja 1 ter o maior faturamento**, ela **tem a pior avaliação dos c
 ```bash
    streamlit run ./app/main.py
 ```
+
+## 👨‍💻 Autor
+
+Projeto desenvolvido por Gabriel Ricardo.<br>

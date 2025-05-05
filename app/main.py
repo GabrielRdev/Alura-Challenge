@@ -123,12 +123,9 @@ frete_medio_loja4 = loja4['Frete'].mean()
 frete_medio_loja4 = round(frete_medio_loja4, 2)
 
 
-st.set_page_config(page_title="Análise de Vendas", page_icon=":bar_chart:", layout="wide")
+st.set_page_config(page_title="Análise de Desempenho de Lojas – Projeto Sr. João", page_icon=":bar_chart:", layout="wide")
 st.title("Análise de Dados da Loja do Sr João")
 st.write("##")
-st.subheader("Relatório Final")
-st.subheader("Contexto")
-st.write("O sr João possui uma rede de 4 Lojas chamada Alura Store no qual vende diversos produtos. Neste caso, o sr João deseja vender uma de suas lojas para iniciar um novo empreendimento. Meu trabalho aqui é auxiliar-lo a entender qual das lojas é mais apropriada para realizar o desejo do Sr João.")
 
 fig = px.line(
     x=["Loja 1", "Loja 2", "Loja 3", "Loja 4"],
