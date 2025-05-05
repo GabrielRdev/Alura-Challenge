@@ -30,13 +30,16 @@ A análise dos principais indicadores das quatro lojas do Sr. João revelou os s
 
 - **🔝 Faturamento Total:**  
   A **Loja 1** possui o maior faturamento (R$1.534.509,12), seguida pela Loja 2 e Loja 3. A **Loja 4 tem o menor faturamento** (R$1.384.497,58), o que pode indicar menor potencial de receita."
-  ![descricao](images/)
 
 - **⭐ Média das Avaliações:**  
   A **Loja 3 é a melhor avaliada pelos clientes** (nota 4.05), enquanto a **Loja 1 apresenta a pior avaliação** (nota 3.98). A percepção do cliente é um fator crucial para a reputação e continuidade do negócio.
 
 - **🚚 Custo Médio do Frete:**  
   A **Loja 4 apresenta o menor custo médio de frete** (R$31,28), o que pode indicar melhor localização logística ou eficiência operacional. A **Loja 1 tem o maior custo médio de frete** (R$34,69), impactando na margem de lucro.
+
+  [Clique aqui para visualizar os gráficos](https://alura-challenge-one-kwvpbbtc4jpfmmwqpvyc9q.streamlit.app/)
+
+---
 
 ### 📌 Considerações
 
