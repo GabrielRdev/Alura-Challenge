@@ -1,0 +1,8 @@
+ pandas 
+ locale
+ sys
+ matplotlib.pyplot 
+ seaborn  
+ streamlit 
+plotly.express 
+plotly.graph_objects 
